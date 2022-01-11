@@ -6,7 +6,6 @@ class RDSAPI extends RESTDataSource {
     this.baseURL = "https://evening-stream-23706.herokuapp.com/"
   }
 
-  // GET
   async getPeople() {
     const response = await this.get("/")
     const stuff = JSON.parse(response)
