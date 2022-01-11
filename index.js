@@ -21,6 +21,7 @@ const typeDefs = gql`
       donation_id: Int
       person_id: Int
     }
+    
     type Address {
       address_id: Int
       person_id: Int
@@ -68,7 +69,6 @@ const server = new ApolloServer({
   },
 })
 
-// The `listen` method launches a web server.
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
   console.log(`
     🚀  Server is ready at ${url}
